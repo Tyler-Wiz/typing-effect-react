@@ -6,19 +6,22 @@ body{
     align-items: center;
 }
 
-.typing{
-    color: rgb(46, 131, 131);
-    position: relative;
+:root{
+    --primary:#137a7a;
 }
 
-.typing::after{
+.typing{
+    color: var(--primary);
+    position: relative;
+    font-size: 2rem;
+}
+
+.blink{
     content: '';
-    margin-left: .3rem;
-    width: .2rem;
-    height: 2.3rem;
-    background-color: aqua;
-    position: absolute;
-    animation: move 1s step-start infinite;
+    margin-left: .5rem;
+    height: 2.5rem;
+    background-color: var(--primary);
+    animation: move .6s step-start infinite;
 }
 
 @keyframes move {
